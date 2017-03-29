@@ -2,9 +2,9 @@
 
 Django web app to implement CRUD
 
-Python Version : 3.6
-Django Version : 1.10
-Operating System : Windows 10
+Python Version : 3.6, 
+Django Version : 1.10, 
+Operating System : Windows 10, 
 IDE : Pycharm
 
 
