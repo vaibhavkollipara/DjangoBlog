@@ -24,8 +24,11 @@ After Cloning the repo go to terminal
  
  In web browser type the localhost address and port number to view the home page
  
- 
  <hr/>
- <img src="https://github.com/vaibhavkollipara/DjangoBlog/blob/master/screens/screen_home.PNG?raw=true" alt="homescreen">
- <img src="https://github.com/vaibhavkollipara/DjangoBlog/blob/master/screens/screen_details.PNG?raw=true" alt="homescreen">
- <img src="https://github.com/vaibhavkollipara/DjangoBlog/blob/master/screens/screen_new.PNG?raw=true" alt="homescreen">
+ <h3>Screenshots</h3>
+ <h4>Homepage</h4>
+ <img src="https://github.com/vaibhavkollipara/DjangoBlog/blob/master/screens/screen_home.PNG?raw=true" alt="Homescreen">
+ <h4>Detail View</h4>
+ <img src="https://github.com/vaibhavkollipara/DjangoBlog/blob/master/screens/screen_details.PNG?raw=true" alt="Detail View">
+ <h4>Add New Post</h4>
+ <img src="https://github.com/vaibhavkollipara/DjangoBlog/blob/master/screens/screen_new.PNG?raw=true" alt="Add New Post">
