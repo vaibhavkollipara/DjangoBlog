@@ -13,7 +13,7 @@ Instructions :
 After Cloning the repo go to terminal
  
  *Making Migrations
- >python manage.py makemigrations main
+ >python manage.py makemigrations main </br>
  >python manage.py migrate
  
  *Create Admin account
