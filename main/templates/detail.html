@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="row">
+        {% if messages %}
+            <div class="col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <div class="card col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            <div class="card-block">
+                <h2 class="card-title">{{ post.title }}</h2>
+                <p class="card-text">{{ post.content }}</p>
+                <div class="card-footer text-muted text-right">
+                    <span class="glyphicon glyphicon-time"></span>&nbsp;{{ post.timestamp|timesince }}&nbsp;ago
+                    <a href="{% url 'main:update' post.slug %}" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="{% url 'main:delete' post.slug %}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+              </div>
+            </div>
+        </div>
+    <div class="col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+        <hr/>
+        <div class="fb-comments" data-href="{{ request.build_absolute_uri }}#configurator" data-numposts="5"></div>
+    </div>
+    </div>
+{% endblock %}
